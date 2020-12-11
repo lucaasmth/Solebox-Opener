@@ -9,9 +9,12 @@ function init(){
 }
 
 function openPid(e){
-	chrome.storage.sync.set({ region: document.getElementById('region').value });
-	pid = document.getElementById('pid').value;
 	region = document.getElementById('region').value;
+	chrome.storage.sync.set({ region: region });
+	pid = document.getElementById('pid').value;
+	if (pid.includes("-")) {
+		pid = pid.split("-").pop().split(".")[0];
+	}
 	var win = window.open("https://www.solebox.com/" + region + "/p/lucaasmth-" + pid + ".html", "_blank");
 	win.focus();
 }
