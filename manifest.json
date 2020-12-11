@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Solebox Region Opener",
-	"version": "0.1",
+	"version": "0.2",
 	"description": "Open Solebox product page to your region using PID or SKU",
 	"icons": {
 		"16": "images/favicon-16x16.png",

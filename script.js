@@ -6,6 +6,10 @@ function init(){
 	document.addEventListener('DOMContentLoaded', () => {
 		document.querySelector('button').addEventListener('click', openPid);
 	});
+
+	document.addEventListener('keydown', (e) => {
+		if (e.keyCode === 13) openPid(e);
+	});
 }
 
 function openPid(e){
